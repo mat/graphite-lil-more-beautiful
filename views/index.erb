@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Numbers</title>
+    <meta http-equiv="refresh" content="<%=params[:refresh] || 10 %>">
+
+   <style type="text/css" media="screen">
+      * { margin: 0; padding: 0; }
+      body { font-family: Helvetica, Arial, 'sans-serif'; background-color: #fff; overflow: auto; color: #000; font-size: 20px; }
+      h1 { font-weight: normal; margin-bottom: 30px; color: #000; font-size: 40px; }
+      a { text-decoration: underline; color: #111; padding: 0.3em; }
+        a:hover { color: #444; }
+      #container { width: 100%; text-align: center; margin: 100px 0;  background-repeat:no-repeat;  background-position: 8em center ; background-color:white; height:300px;
+}     div { padding: 0.5em; }
+    </style>
+  </head>
+
+<% time = params[:time] || '30min' %>
+
+<body class="">
+<div>
+  <center>
+  <% App.timez.reverse.each do |t| %>
+    <a href="/graphs/?time=<%= t %>">last <%= t %></a>
+  <% end %>
+  </center>
+</div>
+
+<% @graphs.each do |g| %>
+  <div>
+    <a href="/graphs/<%=g.id%>" id='<%=g.id%>'>
+     <%=g.title%>
+    </a>
+    (<%=time%>)
+  </div>
+    <a href="/graphs/<%=g.id%>" id='<%=g.id%>'>
+      <img id='<%=g.id%>_img' src='<%= g.to_url(:time => time) %>' />
+    </a>
+  <% end %>
+
+</body>
+</html>

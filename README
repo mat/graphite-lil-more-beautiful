@@ -1,0 +1,5 @@
+
+A simple HTML frontend for Graphite.
+
+bundle install
+bundle exec shotgun stats.rb

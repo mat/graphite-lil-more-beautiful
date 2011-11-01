@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Numbers</title>
+    <meta http-equiv="refresh" content="<%=params[:refresh] || 10 %>">
+
+   <style type="text/css" media="screen">
+      * { margin: 0; padding: 0; }
+      body { font-family: Helvetica, Arial, 'sans-serif'; background-color: #fff; overflow: auto; color: #000; font-size: 20px; }
+      h1 { font-weight: normal; margin-bottom: 30px; color: #000; font-size: 40px; }
+      a { text-decoration: underline; color: #111; padding: 0.3em; }
+        a:hover { color: #444; }
+      #container { width: 100%; text-align: center; margin: 100px 0;  background-repeat:no-repeat;  background-position: 8em center ; background-color:white; height:300px;
+}     div { padding: 0.5em; }
+    </style>
+  </head>
+
+<body class="">
+<div>
+  <center>
+    <h1><%=@graph.title%></h1>
+    <a href="/">home</a>
+  </center>
+</div>
+
+<% App.timez.each do |t| %>
+   <center>
+    <div>
+     <%=t%>
+     </div>
+     <img id='<%=@graph.id%>' src='<%= @graph.to_url(:time => t) %>' />
+   </center>
+<% end %>
+</body>
+</html>
