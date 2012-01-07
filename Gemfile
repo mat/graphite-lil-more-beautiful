@@ -1,7 +1,5 @@
 source :rubygems
 
-gem 'statsd-instrument', :path => "/Users/mat/repos/git/statsd-instrument"
-
 gem 'sinatra'
 gem 'shotgun'
 
