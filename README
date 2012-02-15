@@ -1,5 +1,5 @@
+Very simple 'dashboard' for Graphite.
 
-A simple HTML frontend for Graphite.
-
-bundle install
-bundle exec shotgun stats.rb
+1. Edit config.rb (graphite host location, define graphs)
+2. bundle install
+3. bundle exec shotgun stats.rb
