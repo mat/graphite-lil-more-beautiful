@@ -9,7 +9,8 @@ Graph.define do |g|
   g.title  "Twitter action"
   g.target "stats.twitter.halloween"
   g.target "stats.twitter.obama"
-  g.target "stats.twitter.rchh"
+  
+  g.target "sum(stats.twitter.halloween,stats.twitter.spring)"
 end
 
 Graph.define do |g|

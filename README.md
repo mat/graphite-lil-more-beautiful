@@ -5,6 +5,8 @@ Very simple 'dashboard' for Graphite, with Graphs being defined in Ruby
     g.title "Twitter action"
     g.target "stats.twitter.halloween"
     g.target "stats.twitter.spring"
+    
+    g.target "sum(stats.twitter.halloween,stats.twitter.spring)"
   end
 ```
 
