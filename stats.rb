@@ -24,7 +24,7 @@ class Graph
   end
 
   def to_url(params = {})
-    time = (params[:time] || '30min').strip
+    time = (params[:time] || '60min').strip
     time = "-#{time}" unless time =~ /^[-]/
     "http://#{App.host}/render?#{to_param}&from=#{time}"
   end
