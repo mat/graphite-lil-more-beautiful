@@ -66,7 +66,7 @@ class Graph
       :template => "plain",
       :width => 1000,
       :height => 300,
-      :tz=>"CET",
+      :tz=> App.timezone,
       :fontSize => '11',
       :min => 0,
     }

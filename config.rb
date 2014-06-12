@@ -3,6 +3,7 @@ require 'ostruct'
 App = OpenStruct.new({
   :host => "graphite",
   :timez => %w(60min 6hours 24hours 1week 1month),
+  :timezone => "CET"
 })
 
 Graph.define do |g|
