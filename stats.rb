@@ -69,6 +69,7 @@ class Graph
       :tz=> App.timezone,
       :fontSize => '11',
       :min => 0,
+      :format => "svg",
     }
   end
 
