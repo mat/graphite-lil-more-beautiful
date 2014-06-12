@@ -81,7 +81,7 @@ class Graph
   end
 end
 
-require 'config.rb'
+require_relative 'config.rb'
 
 get '/' do
   @graphs = Graph.graphs
