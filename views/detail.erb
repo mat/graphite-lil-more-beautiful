@@ -15,12 +15,12 @@
 </div>
 
 <% App.timez.each do |t| %>
-   <center>
+  <center>
     <div>
-     <%=t%>
-     </div>
-     <img src='<%= @graph.to_url(:time => t) %>' />
-   </center>
+      <%=t%>
+      <img src='<%= @graph.to_url(:time => t) %>' />
+    </div>
+  </center>
 <% end %>
 </body>
 </html>
