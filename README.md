@@ -3,10 +3,13 @@ Very simple 'dashboard' for Graphite, with Graphs being defined in Ruby
 ```ruby
   Graph.define do |g|
     g.title "Twitter action"
+
     g.target "stats.twitter.halloween"
     g.target "stats.twitter.spring"
-    
     g.target "sum(stats.twitter.halloween,stats.twitter.spring)"
+
+    g.param lineMode: "staircase"
+    g.param hideGrid: true
   end
 ```
 
