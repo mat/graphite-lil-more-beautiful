@@ -82,7 +82,11 @@ class Graph
   end
 end
 
-require_relative 'config.rb'
+if config_file = ENV["GLMB_CONFIG"]
+  require config_file
+else
+  require_relative 'config.rb'
+end
 
 get '/' do
   @graphs = Graph.graphs
